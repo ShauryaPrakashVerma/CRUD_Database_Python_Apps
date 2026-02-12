@@ -41,4 +41,5 @@ class Dbhelper:
         
         # fetches all the data stored in mycursor when reading type operation is performed in the database
         data = self.mycursor.fetchall()
-        print(data)
+        
+        return data
