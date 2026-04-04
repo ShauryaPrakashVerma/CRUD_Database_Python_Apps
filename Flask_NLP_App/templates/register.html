@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NLP App | Login Page</title>
+  </head>
+  <body>
+    <h1>NLP App</h1>
+
+    <h2>Register</h2>
+
+    <!-- JINJA TEMPLATE = allows to write pyhton code inside html file. Comes built-in with Flask -->
+    {% if message %}
+        <p style="color: red;">{{message}}</p>
+    {% endif %}
+
+
+    <form action="/perform_registration" method="post">
+      <label>Name</label><br />
+      <input type="text" name="user_name" required/>
+      <br /><br />
+      <label>Email:</label><br />
+      <input type="email" name="user_email" id="" required/>
+      <br /><br />
+      <label>Password:</label><br />
+      <input type="password" name="user_password" id="" required/>
+      <br /><br />
+      <label>Re-enter Password:</label><br />
+      <input type="password" name="" id="" required/>
+      <br /><br />
+      <br />
+      <input type="submit" value="Register" />
+    </form>
+    <br />
+    <br />
+    <br />
+    <p>Already a member?<a href="/">Log in</a></p>
+  </body>
+</html>
